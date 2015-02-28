@@ -10,6 +10,7 @@ class MainController < ApplicationController
   end
 
   def submit
+<<<<<<< HEAD
   	acceleration = (params[ :final_velocity ].to_f - params[:initial_velocity].to_f)/params[:time].to_f
   	redirect_to( { :action => 'result', :answer => acceleration} )
 
@@ -21,10 +22,11 @@ class MainController < ApplicationController
 
 
 
+
   end
 
   def result
-  	@result = params[:answer]
+  	@result = params[:v]
 
   end
 
