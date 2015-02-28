@@ -10,13 +10,13 @@ class MainController < ApplicationController
   end
 
   def submit
-  	if params[:acceleration_ask]
-      acceleration = (params[ :final_velocity ].to_f - params[:initial_velocity].to_f)/params[:time].to_f
-  	  redirect_to( { :action => 'result', :answer => acceleration} )
-    end
+  	
+      #acceleration = (params[ :final_velocity ].to_f - params[:initial_velocity].to_f)/params[:time].to_f
+  	  #redirect_to( { :action => 'result', :answer => acceleration} )
+  
 
-   # final_velocity = params[ :initial_velocity ].to_f + params[:acceleration].to_f)*params[:time].to_f
-  	#redirect_to( { :action => 'result', :answer => final_velocity} )
+      final_velocity = params[ :initial_velocity ].to_f + params[:acceleration].to_f) * params[:time].to_f
+  	  redirect_to( { :action => 'result', :answer => final_velocity} )
 
   	#displacement = (params[ :initial_velocity ].to_f * params[:time].to_f)+(1/2)params[:acceleration].to_f
   	#redirect_to( { :action => 'result', :answer => displacement} )
