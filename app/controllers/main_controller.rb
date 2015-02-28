@@ -19,8 +19,6 @@ class MainController < ApplicationController
   	displacement = (params[ :initial_velocity ].to_f * params[:time].to_f)+(1/2)params[:acceleration].to_f
   	redirect_to( { :action => 'result', :answer => displacement} )
 
-  	final_velocity = Math.sqrt(params[ :initial_velocity ].to_f * params[:initial_velocity].to_f))+2(params[:acceleration].to_f)(params[:time].to_f)
-  	redirect_to( { :action => 'result', :answer => final_velocity} ))
 
 
   end
