@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-  	@acceleration = 200
+  	@acceleration = 100
 
 
   end
@@ -10,12 +10,12 @@ class MainController < ApplicationController
   end
 
   def submit
-  	c = params[ :a ].to_i + params[:b].to_i
-  	redirect_to( { :action => 'result', :c => c } )
+  	v = params[ :d ].to_i / params[:t].to_i
+  	redirect_to( { :action => 'result', :v => v } )
   end
 
   def result
-  	@result = params[:c]
+  	@result = params[:v]
 
   end
 
