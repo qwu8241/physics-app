@@ -22,7 +22,7 @@ class MainController < ApplicationController
   end
 
   def result
-  	@result = params[:v]
+  	@result = params[:answer]
 
   end
 
