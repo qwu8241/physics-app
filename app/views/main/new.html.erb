@@ -1,22 +1,31 @@
-<form action="/submit">
-  acceleration: <input type="text" name="acceleration"><br>
-  initial velocity: <input type="text" name="initial_velocity"><br>
-  final  velocity: <input type="text" name="final_velocity"><br>
-  time: <input type="text" name="time"><br>
-  displacement: <input type="text" name="displacement"><br>
-  <br>
+<form action="/submit1">
+List Your Givens:
+<br><br>
+1.
+<select name= "given1">
+  <option value="acceleration">acceleration</option>
+  <option value="initial_velocity" selected>initial_velocity</option>
+  <option value="final_velocity">final_velocity</option>
+  <option value="time">time</option>
+  <option value="displacement">displacement</option>
+</select><br><br>
+2.
+<select name="given2">
+  <option value="acceleration">acceleration</option>
+  <option value="initial_velocity">initial_velocity</option>
+  <option value="final_velocity" selected>final_velocity</option>
+  <option value="time">time</option>
+  <option value="displacement">displacement</option><br>
+</select><br><br>
+3.
+<select name="given3">
+  <option value="acceleration">acceleration</option>
+  <option value="initial_velocity">initial_velocity</option>
+  <option value="final_velocity">final_velocity</option>
+  <option value="time"selected>time</option>
+  <option value="displacement">displacement</option><br>
+</select><br><br>
 
-  Which variable do you want to find?
-  <br>
-  <input type="radio" name="unit" value="acceleration_ask" checked>acceleration
-  <br>
-  <input type="radio" name="unit" value="initial velocity_ask" checked>initial velocity
-  <br>
-  <input type="radio" name="unit" value="final velocity_ask" checked>final velocity
-  <br>
-  <input type="radio" name="unit" value="time_ask" checked>time
-  <br>
-  <input type="radio" name="unit" value="displacement_ask" >displacement
-  <br>
-  <input type="submit" value="Submit">
+<input type="submit" value="Submit">
 </form>
+

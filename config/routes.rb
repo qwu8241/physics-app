@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   root 'main#index'
   get '/new' => 'main#new'
-  get '/submit' => 'main#submit'
+  get '/submit1' => 'main#page'
+  get '/submit2' => 'main#submit'
+  get '/acceleration'=> 'main#acceleration'
+  get '/displacement'=> 'main#displacement'
+  get '/final_velocity'=> 'main#final_velocity'
+  get '/initial_velocity'=> 'main#initial_velocity'
+  get '/time'=> 'main#time'
   get '/result' => 'main#result'
 
   # The priority is based upon order of creation: first created -> highest priority.

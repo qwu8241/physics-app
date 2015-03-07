@@ -1,0 +1,21 @@
+<form action="/submit2">
+  <%= @first_var %>: <input type="text" name="a1"><br><br>
+  <%= @second_var %>: <input type="text" name="a2"><br><br>
+  <%= @third_var %>: <input type="text" name="a3"><br>
+  <input type="hidden" name="given1" value = <%= @first_var %>>
+  <input type="hidden" name="given2" value = <%= @second_var %>>
+  <input type="hidden" name="given3" value = <%= @third_var %>>
+  <br>
+   Which variable do you want to find?
+  <br>
+  <input type="radio" name="unit" value="acceleration_ask" checked>acceleration
+  <br>
+  <input type="radio" name="unit" value="initialvelocity_ask" >initial velocity
+  <br>
+  <input type="radio" name="unit" value="finalvelocity_ask" >final velocity
+  <br>
+  <input type="radio" name="unit" value="time_ask">time
+  <br>
+  <input type="radio" name="unit" value="displacement_ask" >displacement
+  <br><br>
+  <input type="submit" value="Submit">
