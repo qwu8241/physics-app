@@ -38,7 +38,9 @@ class MainController < ApplicationController
       elsif params[:unit] =="time_ask"
         redirect_to({:action=> "time"})
       elsif params[:unit] =="initialvelocity_ask"
-        redirect_to({:action=> "initial_velocity"})
+        redirect_to({:action=> "initial_velocity",:array => g, 
+          :final_velocity=>final_velocity,:acceleration=>acceleration,
+          :time=>time,:displacement=>displacement})
       elsif params[:unit] =="finalvelocity_ask"
         redirect_to({:action=> "final_velocity"})
     end
@@ -77,6 +79,17 @@ class MainController < ApplicationController
   end
 ####################################################################
   def initial_velocity
+    g=params[:array]
+    if g.include?("acceleration") == false then
+      initial_velocity=((2.0*params[:displacement].to_f)/params[:time].to_f)-params[:final_velocity].to_f
+     elsif g.include?("final_velocity") == false then
+      initial_velocity=params[:displacement].to_f-(params[:acceleration].to_f*params[:time].to_f)
+     elsif g.include?("displacement") == false then
+      initial_velocity=(params[:final_velocity].to_f/params[:time].to_f)-(0.5*params[:acceleration].to_f*params[:time].to_f)
+     elsif g.include?("time") == false then
+      initial_velocity=((params[:final_velocity]**2)-(2.0*params[:acceleration]*params[:displacement]))
+    end
+    @initial_velocity=initial_velocity
   end
 ####################################################################
   def final_velocity
